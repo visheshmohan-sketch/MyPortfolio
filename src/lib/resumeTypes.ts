@@ -1,10 +1,18 @@
 export interface ResumeData {
   name: string
   title: string
+  tagline: string
+  summary: string
+  location: string
+  email: string
+  phone: string
+  linkedin: string
+  github?: string
   skills: SkillCategory[]
   experience: Experience[]
   projects: Project[]
   education?: Education[]
+  stats?: { value: string; label: string }[]
 }
 
 export interface SkillCategory {

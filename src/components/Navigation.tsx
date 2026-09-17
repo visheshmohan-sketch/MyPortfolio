@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import { useResume } from '@/lib/resumeContext'
 
 const navItems = [
   { label: 'About', href: '#about' },
@@ -13,6 +14,7 @@ const navItems = [
 ]
 
 export default function Navigation() {
+  const { resume } = useResume()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -31,7 +33,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="text-xl font-bold gradient-text">
-            Sheeba Ahmed
+            {resume.name}
           </a>
           
           {/* Desktop Navigation */}

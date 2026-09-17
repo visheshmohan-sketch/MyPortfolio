@@ -15,7 +15,7 @@ export default function Timeline() {
           <span className="gradient-text">Career Journey</span>
         </h2>
         <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-          15+ years of progressive growth from individual contributor to engineering leader
+          {resume.experience.length} roles spanning engineering delivery, leadership, and execution
         </p>
 
         <div className="relative">
@@ -71,9 +71,13 @@ export default function Timeline() {
         {/* Education */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold mb-4">Education</h3>
-          <div className="bg-slate-800 rounded-xl p-6 inline-block border border-slate-700">
-            <p className="text-xl font-semibold">B.Tech, Computer Science Engineering</p>
-            <p className="text-gray-400">Harcourt Butler Technological Institute, Kanpur, India</p>
+          <div className="space-y-4">
+            {resume.education?.map((item, index) => (
+              <div key={index} className="bg-slate-800 rounded-xl p-6 inline-block border border-slate-700 mx-2">
+                <p className="text-xl font-semibold">{item.degree}</p>
+                <p className="text-gray-400">{item.school} | {item.year}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

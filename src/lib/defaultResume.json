@@ -1,6 +1,19 @@
 {
   "name": "Sheeba Ahmed",
   "title": "Software Engineering Manager",
+  "tagline": "Hands-on Engineering Leader with 15+ years in Cloud, SaaS & AI Innovation",
+  "summary": "Hands-on Software Engineering Manager with 15+ years of experience in cloud engineering, SaaS product development, and DevOps. Expert in Azure, microservices, Kubernetes, CI/CD, and Agile delivery. I wear multiple hats across development management, product, program, QE, support, and operations to keep delivery moving and ensure end-to-end execution. Passionate about automation, AI innovation, workflow simplification, and scalable customer-focused products.",
+  "location": "Sugar Land, TX",
+  "email": "sheeba.hbti@gmail.com",
+  "phone": "267-251-7525",
+  "linkedin": "linkedin.com/in/sheeba-ahmed",
+  "github": "github.com/sheebahbti",
+  "stats": [
+    { "value": "15+", "label": "Years Experience" },
+    { "value": "90%", "label": "Team Retention" },
+    { "value": "30%", "label": "Deployment Time Reduced" },
+    { "value": "3%", "label": "Revenue Impact" }
+  ],
   "skills": [
     {
       "title": "Cloud & Infrastructure",
@@ -133,6 +146,13 @@
       "title": "Cloud Infrastructure Migration",
       "description": "Led migration of legacy modules to microservices on Azure/AKS with 100+ screens migrated from legacy UI to React",
       "tech": ["Azure", "Kubernetes", "Microservices", "React", "Cloud"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Tech, Computer Science Engineering",
+      "school": "Harcourt Butler Technological Institute, Kanpur, India",
+      "year": "2006"
     }
   ]
 }

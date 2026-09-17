@@ -1,4 +1,5 @@
 import { Target, Users, Lightbulb, Rocket } from 'lucide-react'
+import { useResume } from '@/lib/resumeContext'
 
 const philosophyItems = [
   {
@@ -24,6 +25,8 @@ const philosophyItems = [
 ]
 
 export default function About() {
+  const { resume } = useResume()
+
   return (
     <section id="about" className="py-20 px-4 bg-slate-800/50">
       <div className="max-w-6xl mx-auto">
@@ -31,23 +34,12 @@ export default function About() {
           <span className="gradient-text">About Me</span>
         </h2>
         <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-          Engineering leader passionate about building scalable solutions and empowering teams
+          {resume.title} focused on delivery, team leadership, and measurable outcomes
         </p>
 
         {/* Summary */}
         <div className="bg-slate-800 rounded-2xl p-8 mb-12 card-hover border border-slate-700">
-          <p className="text-lg text-gray-300 leading-relaxed">
-            Hands-on Software Engineering Manager with <span className="text-blue-400 font-semibold">15+ years</span> of 
-            experience in cloud engineering, SaaS product development, and DevOps. Expert in 
-            <span className="text-purple-400 font-semibold"> Azure, microservices, Kubernetes, CI/CD</span>, and 
-            Agile delivery. I wear multiple hats across development management, product, program, QE, support, 
-            and operations—stepping into whichever role is needed to keep delivery moving and ensure end-to-end execution.
-          </p>
-          <p className="text-lg text-gray-300 leading-relaxed mt-4">
-            Passionate about <span className="text-yellow-400 font-semibold">automation, AI innovation</span>, 
-            workflow simplification, and delivering scalable, customer-focused products. Currently driving 
-            AI-powered initiatives at PROS Inc. to transform how engineering teams work.
-          </p>
+          <p className="text-lg text-gray-300 leading-relaxed">{resume.summary}</p>
         </div>
 
         {/* Leadership Philosophy */}
@@ -69,12 +61,7 @@ export default function About() {
 
         {/* Key Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-          {[
-            { value: '15+', label: 'Years Experience' },
-            { value: '90%', label: 'Team Retention' },
-            { value: '30%', label: 'Deployment Time Reduced' },
-            { value: '3%', label: 'Revenue Impact' },
-          ].map((stat, index) => (
+          {(resume.stats || []).map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-4xl font-bold gradient-text mb-2">{stat.value}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>

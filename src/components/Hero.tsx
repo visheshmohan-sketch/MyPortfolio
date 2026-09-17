@@ -1,6 +1,9 @@
 import { MapPin, Mail, Phone, Linkedin, Github, Sparkles } from 'lucide-react'
+import { useResume } from '@/lib/resumeContext'
 
 export default function Hero() {
+  const { resume } = useResume()
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated Background */}
@@ -14,38 +17,38 @@ export default function Hero() {
         <div className="mb-8">
           <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-500 p-1">
             <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
-              <span className="text-4xl font-bold gradient-text">SA</span>
+              <span className="text-4xl font-bold gradient-text">{resume.name.split(' ').map((part) => part[0]).join('')}</span>
             </div>
           </div>
         </div>
 
         {/* Name & Title */}
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
-          <span className="gradient-text">Sheeba Ahmed</span>
+          <span className="gradient-text">{resume.name}</span>
         </h1>
         
         <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 flex items-center justify-center gap-2">
-          Software Engineering Manager
+          {resume.title}
           <Sparkles className="text-yellow-400 w-6 h-6" />
         </h2>
 
         <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-          Hands-on Engineering Leader with 15+ years in Cloud, SaaS & AI Innovation
+          {resume.tagline}
         </p>
 
         {/* Location & Contact */}
         <div className="flex flex-wrap items-center justify-center gap-6 text-gray-400 mb-10">
           <span className="flex items-center gap-2">
             <MapPin className="w-5 h-5 text-blue-400" />
-            Sugar Land, TX
+            {resume.location}
           </span>
-          <a href="mailto:sheeba.hbti@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors">
+          <a href={`mailto:${resume.email}`} className="flex items-center gap-2 hover:text-white transition-colors">
             <Mail className="w-5 h-5 text-blue-400" />
-            sheeba.hbti@gmail.com
+            {resume.email}
           </a>
           <span className="flex items-center gap-2">
             <Phone className="w-5 h-5 text-blue-400" />
-            267-251-7525
+            {resume.phone}
           </span>
         </div>
 
@@ -68,7 +71,7 @@ export default function Hero() {
         {/* Social Links */}
         <div className="flex items-center justify-center gap-6 mt-10">
           <a
-            href="https://linkedin.com/in/sheeba-ahmed"
+            href={`https://${resume.linkedin}`}
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-colors"
@@ -76,15 +79,15 @@ export default function Hero() {
           >
             <Linkedin className="w-6 h-6" />
           </a>
-          <a
-            href="https://github.com/sheebahbti"
+          {resume.github && <a
+            href={`https://${resume.github}`}
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-colors"
             aria-label="GitHub"
           >
             <Github className="w-6 h-6" />
-          </a>
+          </a>}
         </div>
 
         {/* Scroll Indicator */}
