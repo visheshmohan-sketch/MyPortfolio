@@ -1,3 +1,5 @@
+'use client'
+
 import { Target, Users, Lightbulb, Rocket } from 'lucide-react'
 import { useResume } from '@/lib/resumeContext'
 

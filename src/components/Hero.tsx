@@ -1,3 +1,5 @@
+'use client'
+
 import { MapPin, Mail, Phone, Linkedin, Github, Sparkles } from 'lucide-react'
 import { useResume } from '@/lib/resumeContext'
 
