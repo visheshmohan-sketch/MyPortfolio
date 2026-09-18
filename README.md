@@ -25,7 +25,6 @@ Changes automatically deploy to the live URL!
 - **About** - Summary and leadership philosophy
 - **Skills** - Technical and leadership competencies
 - **Career Timeline** - Interactive journey from IC to Manager
-- **AI Initiatives** - Showcase of AI-powered projects
 - **Key Projects** - Achievements with measurable impact
 - **Contact** - Multiple ways to connect
 
