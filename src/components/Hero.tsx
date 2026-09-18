@@ -64,14 +64,12 @@ export default function Hero() {
           >
             Get in Touch
           </a>
-          {!resume.name.startsWith('Vishesh Singh') && (
-            <a
-              href="#ai"
-              className="px-8 py-3 border border-gray-600 rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
-            >
-              View AI Projects
-            </a>
-          )}
+          <a
+            href="#ai"
+            className="px-8 py-3 border border-gray-600 rounded-full font-semibold hover:bg-white/10 transition-all duration-300"
+          >
+            View AI Projects
+          </a>
         </div>
 
         {/* Social Links */}

@@ -45,10 +45,10 @@ const aiProjects = [
 
 const portfolioProject = {
   icon: GitBranch,
-  title: 'Portfolio Built with GitHub and VS Code',
-  description: 'Built and maintained this portfolio using GitHub for source control and deployment, with VS Code as the development environment.',
+  title: 'Portfolio Built with AI and VS Code',
+  description: 'Built and maintained this portfolio using AI assistance and VS Code as the development environment.',
   impact: 'Streamlined portfolio delivery',
-  tags: ['GitHub', 'VS Code', 'Web Development'],
+  tags: ['AI', 'VS Code', 'Web Development'],
   status: 'Active',
 }
 
