@@ -1,6 +1,6 @@
 # Portfolio Architecture
 
-🌐 **Live Site**: [https://sheebahbti.github.io/MyPortfolio/](https://sheebahbti.github.io/MyPortfolio/)
+🌐 **Live Site**: [https://visheshmohan-sketch.github.io/MyPortfolio/vishesh-singh/](https://visheshmohan-sketch.github.io/MyPortfolio/vishesh-singh/)
 
 ## System Architecture
 
@@ -63,7 +63,7 @@ flowchart TB
     ACTIONS -->|"npm build"| STATIC
     STATIC -->|"Deploy"| PAGES
     PAGES --> CDN
-    CDN -->|"sheebahbti.github.io/MyPortfolio"| USER((User))
+    CDN -->|"visheshmohan-sketch.github.io/MyPortfolio/vishesh-singh"| USER((User))
 ```
 
 ## Deployment Pipeline
@@ -89,7 +89,7 @@ flowchart LR
 
     subgraph DEPLOY["🌐 Deployment"]
         PAGES[GitHub Pages]
-        LIVE[Live Site<br/>sheebahbti.github.io/MyPortfolio]
+        LIVE[Live Site<br/>visheshmohan-sketch.github.io/MyPortfolio/vishesh-singh]
     end
 
     CODE --> LOCAL
