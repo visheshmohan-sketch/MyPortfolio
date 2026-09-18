@@ -43,7 +43,18 @@ const aiProjects = [
   },
 ]
 
-export default function AIInitiatives() {
+const portfolioProject = {
+  icon: GitBranch,
+  title: 'Portfolio Built with GitHub and VS Code',
+  description: 'Built and maintained this portfolio using GitHub for source control and deployment, with VS Code as the development environment.',
+  impact: 'Streamlined portfolio delivery',
+  tags: ['GitHub', 'VS Code', 'Web Development'],
+  status: 'Active',
+}
+
+export default function AIInitiatives({ includePortfolioProject = false }: { includePortfolioProject?: boolean }) {
+  const projects = includePortfolioProject ? [...aiProjects, portfolioProject] : aiProjects
+
   return (
     <section id="ai" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -62,7 +73,7 @@ export default function AIInitiatives() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {aiProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <div
               key={index}
               className="bg-slate-800 rounded-xl p-6 card-hover border border-slate-700 relative overflow-hidden group"

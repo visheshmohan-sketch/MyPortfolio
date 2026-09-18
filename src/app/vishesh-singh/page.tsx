@@ -24,7 +24,7 @@ export default function VisheshSinghPortfolio() {
         <About />
         <Skills />
         <Timeline />
-        <AIInitiatives />
+        <AIInitiatives includePortfolioProject />
         <Projects />
         <Contact />
       </main>
