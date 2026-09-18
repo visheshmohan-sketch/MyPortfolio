@@ -53,7 +53,7 @@ const portfolioProject = {
 }
 
 export default function AIInitiatives({ includePortfolioProject = false }: { includePortfolioProject?: boolean }) {
-  const projects = includePortfolioProject ? [portfolioProject, ...aiProjects] : aiProjects
+  const projects = includePortfolioProject ? [portfolioProject] : aiProjects
 
   return (
     <section id="ai" className="py-20 px-4">
