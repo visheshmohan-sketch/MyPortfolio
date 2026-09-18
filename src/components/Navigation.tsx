@@ -17,6 +17,9 @@ const navItems = [
 
 export default function Navigation() {
   const { resume } = useResume()
+  const visibleNavItems = resume.name.startsWith('Vishesh Singh')
+    ? navItems.filter((item) => item.label !== 'AI Initiatives')
+    : navItems
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
@@ -40,7 +43,7 @@ export default function Navigation() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
+            {visibleNavItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
@@ -63,7 +66,7 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-slate-800 rounded-lg mt-2 p-4">
-            {navItems.map((item) => (
+            {visibleNavItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
