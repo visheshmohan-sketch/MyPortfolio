@@ -19,7 +19,9 @@ export default function Hero() {
         <div className="mb-8">
           <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-purple-500 p-1">
             <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
-              <span className="text-4xl font-bold gradient-text">{resume.name.split(' ').map((part) => part[0]).join('')}</span>
+              <span className={`${resume.name.startsWith('Vishesh Singh') ? 'text-xl leading-tight' : 'text-4xl'} font-bold gradient-text`}>
+                {resume.name.startsWith('Vishesh Singh') ? <>Vishesh<br />Singh</> : resume.name.split(' ').map((part) => part[0]).join('')}
+              </span>
             </div>
           </div>
         </div>
